@@ -109,9 +109,9 @@ function App() {
                     <Buttons onCalculate={handleCalculate} onReset={() => setShowResult(false)} />
                 </form>
             </Card>
-            <Card>
-                {(weightKg && heightCm && showResult) ? <ResultTable weight={weightKg} height={heightCm} /> : ''}
-            </Card>
+            {(weightKg && heightCm && showResult) && <Card>
+                <ResultTable weight={weightKg} height={heightCm} />
+            </Card>}
         </>
     );
 }
